@@ -1,0 +1,7 @@
+<button class="btn" (click)="insertnewlevel()">New level</button>
+
+<ul *ngIf="JsonData">
+  <li *ngFor="let data of JsonData">
+    <tree-view [id]="data._id" [nodes]="data.data">Loading...</tree-view>
+  </li>
+</ul>

@@ -1,0 +1,12 @@
+<ul *ngIf="nodes">
+  <li *ngFor="let n2 of nodes">
+    <button class="glyphicon glyphicon-saved" (click)="updateData(nodes)"></button>
+    <button class="glyphicon glyphicon-plus" (click)="addSubNodes(n2)"></button>
+    <button Class="glyphicon glyphicon-chevron-right" aria-hidden="true" (click)="toggle()"></button>
+    <a (click)="injectdata(n2)">{{n2.title}}</a>
+    <div *ngIf="isExpanded">
+      <tree-view [nodes]="n2.nodes"></tree-view>
+    </div>
+  </li>
+</ul>
+
